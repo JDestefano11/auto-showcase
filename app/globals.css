@@ -12,6 +12,8 @@
   --background-dark: #F1F5F9;
   --text: #1E293B;
   --text-light: #475569;
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
 }
 
 @layer base {
@@ -27,14 +29,30 @@
 
   body {
     @apply min-h-screen bg-gradient-to-br from-[#FAFAFA] via-[#FFF8F3] to-[#FFF4EA];
+    font-family: var(--font-inter);
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply text-[var(--text)] font-bold;
+    font-family: var(--font-playfair);
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    @apply text-5xl lg:text-7xl leading-tight;
+  }
+
+  h2 {
+    @apply text-4xl lg:text-5xl leading-tight;
+  }
+
+  h3 {
+    @apply text-3xl lg:text-4xl leading-snug;
   }
 
   p {
-    @apply text-[var(--text-light)];
+    @apply text-[var(--text-light)] leading-relaxed;
+    font-family: var(--font-inter);
   }
 }
 
@@ -187,6 +205,7 @@
 
   .hero-gradient {
     @apply bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] bg-clip-text text-transparent;
+    font-family: var(--font-playfair);
   }
 
   .card-gradient {
@@ -197,12 +216,14 @@
     @apply bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] 
            text-white rounded-lg hover:shadow-xl hover:scale-105 
            transition-all duration-300;
+    font-family: var(--font-inter);
   }
 
   .button-secondary {
     @apply bg-white/80 text-[var(--primary)] border-2 border-[var(--primary)]
            rounded-lg hover:bg-[#FFF4EA] hover:scale-105 
            transition-all duration-300;
+    font-family: var(--font-inter);
   }
 
   .stats-card {
@@ -215,6 +236,7 @@
     @apply text-3xl font-bold bg-gradient-to-r 
            from-[var(--primary)] to-[var(--primary-dark)] 
            bg-clip-text text-transparent;
+    font-family: var(--font-playfair);
   }
 
   .floating-card {

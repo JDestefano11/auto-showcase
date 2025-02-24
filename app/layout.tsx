@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const geist = Geist({
+const inter = Inter({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
   title: "AutoVista - Luxury Car Rentals",
-  description: "Experience luxury and performance with our premium car rental service.",
+  description: "Experience luxury car rentals with AutoVista. Premium vehicles for your journey.",
 };
 
 export default function RootLayout({
@@ -17,10 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={geist.className} style={{ isolation: "isolate" }}>
-        {children}
-      </body>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

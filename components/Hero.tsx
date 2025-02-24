@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import CustomButton from "./CustomButton";
+import carlogo from "../public/hero.png";
 
 const Hero = () => {
   const handleScroll = () => {
@@ -74,7 +75,7 @@ const Hero = () => {
           {/* Car Image */}
           <div className="relative w-full h-full">
             <Image
-              src="https://cdn.imagin.studio/getimage?customer=img&make=lamborghini&modelFamily=huracan&modelRange=huracan&modelVariant=coupe&angle=23&zoomType=fullscreen"
+              src={carlogo}
               alt="Luxury Car Rental"
               fill
               className="object-contain z-10 hover:scale-105 transition-transform duration-500"

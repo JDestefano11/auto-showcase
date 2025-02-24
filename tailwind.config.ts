@@ -37,8 +37,12 @@ const config: Config = {
           card: '#FFFFFF'     // Card background
         }
       },
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        serif: ['var(--font-playfair)'],
+      },
       borderRadius: {
-        'blob': '63% 37% 70% 30% / 40% 50% 50% 60%',
+        'blob': '40% 60% 70% 30% / 40% 50% 60% 50%',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
